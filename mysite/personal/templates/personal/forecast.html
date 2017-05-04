@@ -2,13 +2,52 @@
 {% block content %}
 {% load static %}
 
+<style>
+
+table tr:last-child {
+    font-weight:bold;
+}
+table td:first-child {
+    text-align: left;
+}
+
+</style>
+
+
 <html>
-<body class="body">
-<div class="col-sm-12" align="center">
-    <object data="{% static 'personal/img/Granzow_Resume.pdf' %}" type="application/pdf" width="80%" height="700px">
-        <p>It appears you don't have a PDF plugin for this browser. You can <a href="{% static 'personal/img/Granzow_Resume.pdf' %}">click here to download the PDF file.</a></p>
-    </object>
-</div>
+
+
+<body>
+{% csrf_token %}
+
+<div class="row">
+	<div class="container col-lg-6">
+	 <h2>Portfolio</h2>
+		<table class="table table-bordered table-striped table-condensed">
+			<thead>
+			<tr>
+				{% for header in headers %}
+				<th class="text-center">{{ header }}</th>
+				{% endfor %}
+			</tr>
+			</thead>
+			<tr>
+			{% for i in data %}
+			<tr>
+				{% for k in i %}
+				<td class="text-right">{{ k }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+			</tr>
+		</table>
+	</div>
+
+	<div class="col-lg-6">
+		<img src='mysite/mysite/port.png'>
+	</div>
+
+
 </body>
 </html>
 

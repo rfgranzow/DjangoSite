@@ -11,5 +11,5 @@ urlpatterns = [
     url(r'^django/$', views.django, name='django'),
     url(r'^extra/$', views.extra, name='extra'),
     url(r'^safety/$', views.safety, name='safety'),
-    url(r'^forecast/$', views.forecast, name='forecast'),
+    url(r'^forecast/$', views.forecasttable, name='forecast'),
 ]
