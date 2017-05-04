@@ -1,20 +1,5 @@
 from django.shortcuts import render
-import csv
-import urllib3
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from yahoo_finance import Share
-import schedule
-import threading
-from threading import Thread
-import praw
-import tweepy
 import pandas as pd
-import itertools
-import json
-import time
 import datetime 
 import pandas_datareader as pdr
 import matplotlib
@@ -24,7 +9,6 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 import numpy as np
 from itertools import islice
-from django import forms
 
 def chunk(it, size):
     it = iter(it)
