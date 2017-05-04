@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import pandas as pd
+#import pandas as pd
 import datetime 
 import pandas_datareader as pdr
 import matplotlib
